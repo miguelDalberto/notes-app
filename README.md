@@ -8,7 +8,7 @@ Project idea of [The Complete Node.js Developer Course](https://www.udemy.com/co
 Clone this repo and run:  
     `npm install`
       
-Then, run `npm start` with a command:  
+Then, run `node app.js` with a command:  
  | command | requirements          | description
  |:-------:|:----------------------|:-----------:
  | add     |-\-title [note's title]| adds a note             
