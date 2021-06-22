@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 const chalk = require('chalk')
 
 const addNote = (title, body) => {
@@ -55,6 +56,9 @@ const saveNotes = (notes) => {
 
 const loadNotes = () => {
     try {
+      if(!fs.existsSync(path.join(__dirname, 'notes.json'))) {
+        fs.writeFileSync('notes.json', '[]')
+      }
         const dataBuffer = fs.readFileSync('notes.json')
         const dataJSON = dataBuffer.toString()
         return JSON.parse(dataJSON)
